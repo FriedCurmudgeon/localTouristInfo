@@ -130,6 +130,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Datasheet for table 'users'
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `surname`, `isAdmin`, `created_at`) VALUES
+(1, 'admin', '$2y$10$lTDUUtpmoniMlPcZBYRGQOAjvhyBRB3xg.nwf41P4pCJ2eD5pdvvO', 'Site', 'Admin', 'Y', '2023-05-24 12:01:11');
+
+--
 -- Indexes for dumped tables
 --
 
