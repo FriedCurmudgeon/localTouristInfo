@@ -15,3 +15,8 @@ A service to help tourists and locals find their way around your home town.
 - Parsedown.js
 - BuyMeACoffee
 - (more?)
+
+## ToDo
+- Add toggle TinyMCE.
+- Add ability to define start coordinates in settings. This is now hard-coded.
+- Maybe something else.
