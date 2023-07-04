@@ -38,7 +38,7 @@
                                                 <option value="es" ' . $esSelected . '>🇪🇸 ES</option>
                                         </select>
                                 </form>
-                                <img src="./img/visitrandaberg_logo.png" class="logoHeaderImg" alt="Visit Randaberg Logo">
+                                <img src="./img/logo.png" class="logoHeaderImg" alt="' . $siteShortTitle . ' Logo">
 
                               </div>';
                       else
@@ -54,7 +54,7 @@
                                                 <option value="es" ' . $esSelected . '>🇪🇸 ES</option>
                                         </select>
                                 </form>
-                                 <img src="./img/visitrandaberg_logo.png" class="logoHeaderImg" alt="Visit Randaberg Logo">
+                                 <img src="./img/logo.png" class="logoHeaderImg" alt="' . $siteShortTitle . ' Logo">
 
                         </div>';
     
