@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Attempt to execute the prepared statement
             if($stmt->execute()){
-              echo '<script>window.location.replace("?p=user")</script>';
+              echo '<script>window.location.replace("?p=settings")</script>';
             } else{
                 echo "Oops, something went wrong. Try agsain later.";
             }
