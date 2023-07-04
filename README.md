@@ -1,5 +1,6 @@
 # localTouristInfo
-A service to help tourists and locals find their way around your home town.
+A service to help tourists and locals find their way around your home town.  
+Currently a work in progress.
 
 Demo: https://visitrandaberg.no
 
