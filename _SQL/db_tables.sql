@@ -134,7 +134,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `surname`, `isAdmin`, `created_at`) VALUES
-(1, 'admin', '$2y$10$lTDUUtpmoniMlPcZBYRGQOAjvhyBRB3xg.nwf41P4pCJ2eD5pdvvO', 'Site', 'Admin', 'Y', '2023-05-24 12:01:11');
+(1, 'admin', '$2y$10$1W0QpRc7Pn7khaMTDbz1fOCqFtNHHQ85sGHO8XftGQDQPR6Y1ioJS', 'Site', 'Admin', 'Y', '2023-05-24 12:01:11');
 
 --
 -- Indexes for dumped tables
