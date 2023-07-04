@@ -1,5 +1,5 @@
 # localTouristInfo
-A service to help tourists and locals fint their way around your home town.
+A service to help tourists and locals find their way around your home town.
 
 ## Set up
 - Import /_SQL/db-tables.sql into your MySQL or MariaDB.
