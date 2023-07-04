@@ -12,5 +12,6 @@ A service to help tourists and locals find their way around your home town.
 - Bootstrap
 - FontAwesome
 - TinyMCE
+- Parsedown.js
 - BuyMeACoffee
 - (more?)
