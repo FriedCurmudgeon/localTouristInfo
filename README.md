@@ -9,6 +9,7 @@ Demo: https://visitrandaberg.no
 - Edit */config/conf.php* to match your database credentials.  
 - Replace */img/logo.png* with your own logo.
 - Log on with user __admin__ and password __AdminPass__.
+- Set up your site and add locations from the _settings_ menu. 
 
 _Note: the first location you add (with ID 1 in the database) will be hidden to users not logged in. Will maybe change this later._
 
