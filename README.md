@@ -10,6 +10,8 @@ Demo: https://visitrandaberg.no
 - Replace */img/logo.png* with your own logo.
 - Log on with user __admin__ and password __AdminPass__.
 
+_Note: the firs tlocation you add (with ID 1 in the database) will be hidden to users not logged in. Will maybe change this later._
+
 ## Dependencies
 - leaflet.js
 - Bootstrap
