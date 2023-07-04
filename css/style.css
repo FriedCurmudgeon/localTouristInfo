@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Old+Standard+TT|PT+Serif');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #353836;
+    color: white;
+    font: sans-serif;
+    /*text-align: center;*/
+    font-family: 'Lato, Poppins', sans-serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 50em;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+/* index.pgp and indexPub.php basic styles - START */
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh; 
+    min-height: -webkit-fill-available;
+}
+
+#main_content {
+z-index: 1
+}
+
+.main {
+    margin: 10px;
+    margin-bottom: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* index.pgp and indexPub.php basic styles - END */
+
+/* adm.php basic styles - START */
+.mainAdm {
+    margin: 10px;
+    font-size: 1.4em;
+}
+/* adm.php basic styles - END */
+
+/* Maintenance noticifation styling - START */
+.attention {
+    width: 100%;
+}
+/* Maintenance noticifation styling - END */
+
+/* MAP related styles - START */
+.mapWrapper {
+    flex-grow: 1;
+    width: 99%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    position: relative;
+}
+
+#map {
+	width: 100%;
+    height: 100%;
+}
+
+/* MAP related styles - END */
+
+/* Welcome textbox in map - START */
+
+.custom-popup .leaflet-popup-content-wrapper {
+    background: #2c3e50;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0px;
+}
+
+.custom-popup .leaflet-popup-content-wrapper a {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-popup .leaflet-popup-tip-container {
+    width: 30px;
+    height: 15px;
+}
+
+.custom-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: none;
+}
+
+.welcomeText {
+    width: 100%;
+    text-align: left;
+    padding-top: 0em;
+    padding-left: 0.5em;
+    color: white;
+    font-size: 20px;
+    z-index: 8;
+}
+
+
+
+h2.welcomeTextTitle {
+    font-size: 1.8em;
+    font-family: 'Rancho', cursive;
+}
+
+span.welcomeTextContent {
+    font-size: 0.7em;
+}
+
+.welcomeSponsorLnk {
+    color: white !important;
+    font-size: 12px;
+}
+
+
+a.welcomeSponsorLnk:active, a.welcomeSponsorLnk:link, a.welcomeSponsorLnk:visited, a.welcomeSponsorLnk:hover {
+    color: white !important;
+    font-size: 12px;
+}
+/* Welcome textbox in map - END */
+
+/* Address-boxes in map - START */
+.divOverMap {
+    z-index: 1000;
+    width: auto;
+    height: 100%;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.addressBoxes {
+    display:block;
+    margin-top: 5px;
+    padding: 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #ffffff; /* fallback for browsers that don't understand rgba */
+    border: solid 2px #ffffff; /* fallback for browsers that don't understand rgba */
+    background-color: rgba(255, 255, 255, 0.8); /* slighly transparent white */
+    border-color: rgba(255, 255, 255, 1); /*non-transparent white*/
+}
+
+.addressBoxes a {
+    text-decoration: none;
+    color: black;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-style: none;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal
+}
+
+.tg th {
+    border-style: none;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+}
+
+.tg .tg-wp8o {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tg .tg-73oq {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tg .tg-73op {
+    text-align: left;
+    vertical-align: middle;
+}
+/* Address boxes in map - END */
+
+/* Marker styling - START */
+.markerPopupTitle {
+    font-size: 1.5em;
+}
+
+.markerPopupText {
+    font-size: 2rem;
+    min-width: 200px;
+}
+
+h2.marker-link {
+    font-size: 12px;
+}
+
+table.markerPopupTable {
+    width: 100%;
+}
+
+td.markerPopupCell {
+    font-size:0.7em;
+}
+/* Marker styling - END */
+
+
+/* Footer styling - START */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #1d1f1d;
+    color: white;
+    text-align: center;
+    z-index: 1100;
+}
+
+#footerHeader {
+    color: white;
+    font-size: 12px;
+}
+
+.privacyMenuLink {
+    display: block;
+    font-size: large;
+    color: white;
+    margin-right: 15px;
+}
+
+a.privacyMenuLink:link, 
+a.privacyMenuLink:visited, 
+a.privacyMenuLink:hover, 
+a.privacyMenuLink:active {
+    color: white;
+    text-decoration: none;
+}
+
+.privacyLink {
+    display: none;
+}
+
+#footerSponsor {
+    padding-top: 10px;
+}
+
+.footerTxt {
+    color: white;
+}
+.footerTxt td {
+    color: white;
+    text-align: left;
+    max-width: 70%;
+}
+
+.footerCoffee {
+    color: white;
+    text-align: center;
+}
+
+.footerCoffee td {
+    color: white;
+    text-align: center;
+    max-width: 30%;
+}
+
+.footerLinkWrapper {
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    background-color: #1d1f1d;
+    color: white;
+    text-align: center;
+    z-index: 1050;
+    position:fixed;
+}
+
+.privacyFooterLink {
+    font-size:x-small;
+    color: white;
+}
+
+a.privacyFooterLink:link,
+a.privacyFooterLink:visited,
+a.privacyFooterLink:hover,
+a.privacyFooterLink:active {
+    color: white;
+    text-decoration: none;
+}
+/* Footer styling - END */
+
+/* Seasoning - START */
+.christmas {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-christmas {
+    color: white;
+    background-color: #990033;
+    /*border: 2px solid #0F8A5F;*/
+}
+
+.alert-newYear {
+    color: #DAA520;
+    background-color: #2C3452;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000333;
+}
+/* SEASONING - END */
+
+/* General form styling - END */
+.none {
+    display: none;
+}
+
+.readonly {
+    background-color: lightgrey;
+}
+
+.form-control {
+    font-size: 0.9em !important;
+}
+
+label[for*="collapsible"]:after {
+    content: " "
+}
+
+label:after {
+    content: ": "
+}
+/* General form tyling - END */
+
+/* Settings section styling - START */
+h4.settingsSubHeading {
+    font-size: 1.3em;
+}
+
+.settingDescription {
+    display: block;
+    background-color: lightgrey;
+    color: #000333;
+    border: none;
+    padding: 2px;
+    margin: 2px;
+    margin-left: 0;
+    font-size: 12px;
+}
+
+a.backButton {
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 5px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    list-style: none;
+    padding: 0.375rem 0.75rem;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+a.backButton:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    color: #24292E;
+}
+
+a.backButton:disabled {
+    background-color: #FAFBFC;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+}
+
+a.backButton:active {
+    background-color: #EDEFF2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+    color: #24292E;
+}
+
+a.backButton:focus {
+    outline: 1px transparent;
+}
+
+a.backButton:before {
+    display: none;
+}
+
+a.backButton:-webkit-details-marker {
+    display: none;
+}
+
+.pwChangeConfirm {
+    display: block;
+    padding: 2em;
+    background: lightblue;
+    border: 1 solid royalblue;
+    width: 10em;
+    text-align: center;
+    color: black;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.statusMessage {
+    width: 50em;
+    text-align: left;
+}
+
+.newUserCodeGen {
+    width: 50em;
+    text-align: left;
+    margin-top: 2em;
+}
+
+#regCode {
+    display: block;
+    border: solid lightgrey 1px;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+#copybtn {
+    float: right;
+    margin-top: -0.5em;
+}
+
+#copybtn2 {
+    float: right;
+    margin-top: -2em;
+}
+
+#regCodeNew {
+    display: block;
+    border: solid lightgrey 1px;
+    padding: 1em;
+    margin: 0.5em;
+    background: lightblue;
+    width: 50em;
+}
+
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+    height: 80%;
+    overflow: scroll;
+
+}
+
+#popup .popup-content button {
+    float: right;
+}
+/* Settings section styling - END */
+
+/* Responsive styles - START */
+@media screen and (max-width: 980px) {
+    /* Map related responsive styles - */
+    .mapWrapper {
+        flex-grow: 1;
+        width: 99%;
+        border-color: black;
+        border-width: 2px;
+        border-style: solid;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    /* Map related responsive styles - */
+    /* Address-boxes in map responsive styles - START */
+    .divOverMap {
+        z-index: 1000;
+        width: auto;
+        height: max-content;
+        overflow: scroll;
+        position: absolute;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    
+    .addressWrapper {
+        margin-right: 5px;
+        margin-bottom: 0;
+        display: flex;
+        width: max-content;
+    }
+
+    .addressBoxes {
+        display: block;
+        margin-left: 10px;
+        padding: 2px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #ffffff; /* fallback for browsers that don't understand rgba */
+        border: solid 2px #ffffff; /* fallback for browsers that don't understand rgba */
+        background-color: rgba(255, 255, 255, 0.8); /* slighly transparent white */
+        border-color: rgba(255, 255, 255, 1); /*non-transparent white*/
+        }
+    /* Address-boxes in map responsive styles - END */
+
+}
+/* Responsive styles - END */

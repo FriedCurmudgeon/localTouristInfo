@@ -1,0 +1,217 @@
+header.menuHeader a {
+    text-decoration: none;
+}
+
+header.menuHeader {
+    padding: 0 20px;
+    background-color: #1d1f1d;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brand {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#brand a {
+    color: #ffffff;
+    text-decoration:dotted;
+}
+
+ul.menu {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3em;
+}
+
+ul.menu a {
+    color: white;
+}
+
+ul.menu li {
+    padding: 5px;
+    margin-left: 10px;
+    width: max-content;
+}
+
+ul.menu li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#login,
+#logout,
+#signup {
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+#login {
+    border: 1px solid #498afb;
+}
+
+#logout {
+    border: 1px solid #fa4a56;
+}
+
+#signup {
+    border: 1px solid #ff3860;
+}
+
+#signup a {
+    color: #ff3860;
+}
+
+#login a {
+    color: #498afb;
+}
+
+#logout a {
+    color: #fa4a56;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding-right: 20px;
+    height: auto;
+    width: auto;
+    background-color: #1d1f1d;
+    z-index: 10000;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+ul.mobile-menu a {
+    color: white;
+}
+
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* Page title / Welcome styling - START */
+.logoHeaderImg {
+    z-index: -1;
+    overflow: hidden;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+h1.welcomeTitle {
+    font-size: 2em;
+}
+
+.titleLink {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rancho', cursive;
+}
+
+a.titleLink {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rancho', cursive;
+    text-shadow: 0 0 4px #1d1f1d;
+}
+/* Pagwe title / Welcome styling - END */
+/* Language select - START */
+.langForm {
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    width: 60px;
+    font-size: 0.8em;
+}
+
+select.langForm {
+    color: white;
+    background-color: transparent;
+    position: absolute;
+    border: none;
+}
+/* Language select - END */
+
+.menuIcon {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+@media only screen and (max-width: 980px) {
+    header.menuHeader nav.nav {
+        display: none;
+    }
+
+        #hamburger-icon div {
+            width: 35px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+    #hamburger-icon {
+        display: block;
+    }
+
+       .privacyMenuLink {
+        display: none;
+    }
+
+    .privacyLink {
+        display: block;
+        font-size: large;
+        color: white;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+    a.privacyLink:link,
+    a.privacyLink:visited,
+    a.privacyLink:hover,
+    a.privacyLink:active {
+       color: white;
+       text-decoration: none;
+    }
+}
