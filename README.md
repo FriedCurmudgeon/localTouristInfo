@@ -14,12 +14,13 @@ Demo: https://visitrandaberg.no
 _Note: the first location you add (with ID 1 in the database) will be hidden to users not logged in. Will maybe change this later._
 
 ## Dependencies
-- leaflet.js
-- Bootstrap
-- FontAwesome
-- TinyMCE
-- Parsedown.js
-- BuyMeACoffee
+- [leaflet.js](https://leafletjs.com)
+- [Leaflet.ExtraMarkers](https://github.com/coryasilva/Leaflet.ExtraMarkers)
+- [Bootstrap](https://getbootstrap.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [TinyMCE](https://www.tiny.cloud/)
+- [Parsedown.js](https://github.com/erusev/parsedown)
+- [BuyMeACoffee](https://buymeacoffee.com/tngld)
 - (more?)
 
 ## ToDo
