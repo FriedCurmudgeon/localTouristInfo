@@ -96,61 +96,70 @@
                             id="siteWelcomeText_fr" name="siteWelcomeText_fr" rows="5"
                             class='form-control'>Enter a welcome text.</textarea></div><br>
 
-                    <h4 class='settingsSubHeading'>Sponsors</h4>
-                    <span class="settingDescription">Toggle to show or hide sponsor information and links.</span>
-                    <div class='form-group'><label for='siteAllowSponsors'>Allow sponsors</label>
-                        <select class='form-control' id='siteAllowSponsors' name='siteAllowSponsors'>
-                            <option value='0'>OFF</option> <!-- Allow sponsors OFF -->
-                            <option value='1'>ON</option> <!-- Allow sponsors ON -->
-                        </select>
-                    </div>
-                    <h4 class='settingsSubHeading'>Buy me a coffee</h4>
-                    <span class="settingDescription">Toggle to show or hide "Buy me a coffee" information and links.</span>
-                    <div class='form-group'><label for='siteAllowCoffee'>Allow "Buy me a coffee"</label>
-                        <select class='form-control' id='siteAllowCoffee' name='siteAllowCoffee'>
-                            <option value='0'>OFF</option> <!-- Allow coffee link OFF -->
-                            <option value='1'>ON</option> <!-- Allow coffee link ON -->
-                        </select>
-                    </div>
-                    <h4 class='settingsSubHeading'>Buy me a coffee - handler</h4>
-                    <span class="settingDescription">Enter your "Buy me a coffee" handle (the finel part of your "buy me a
-                        coffee" link). Get one at <a href="https://buymeacoffee.com" title="Buy me a coffee"
-                            target="_blank">buymeacoffee.com</a>.</span>
-                    <div class='form-group'><label for='siteCoffeeLink'>Buymeacoffee handle</label><input
-                            type='text' name='siteCoffeeLink' id='siteCoffeeLink' class='form-control'></div><br>
+                    <h4 class='settingsSubHeading'>Ratufa script</h4>
+                    <span class="settingDescription">Paste the code for your Ratufa contact form. It should look something like like this: <br>
+                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br>
+                    Add ?i=contact_form to your code.</span>
+                    <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
+                            id='siteRatufaScript' name='siteRatufaScript' rows='5'
+                            class='form-control'></textarea></div>
+                            <br>
 
-                    <h4 class='settingsSubHeading'>Cookies text</h4>
-                    <span class="settingDescription">The text that appears in when you click the "Cookies" link in the page
-                        footer.</span>
-                    <div class='form-group'><label for='siteCopyrightText_en'>Cookies text (EN)</label><textarea
-                            name='siteCopyrightText_en' id='siteCopyrightText_en' rows='5'
-                            class='form-control'></textarea></div>
-                    <div class='form-group'><label for='siteCopyrightText_no'>Cookies text (NO)</label><textarea
-                            name='siteCopyrightText_no' id='siteCopyrightText_no' rows='5'
-                            class='form-control'></textarea></div>
-                    <div class='form-group'><label for='siteCopyrightText_de'>Cookies text (DE)</label><textarea
-                            name='siteCopyrightText_de' id='siteCopyrightText_de' rows='5'
-                            class='form-control'></textarea></div>
-                    <div class='form-group'><label for='siteCopyrightText_es'>Cookies text (ES)</label><textarea
-                            name='siteCopyrightText_es' id='siteCopyrightText_es' rows='5'
-                            class='form-control'></textarea></div>
-                    <div class='form-group'><label for='siteCopyrightText_fr'>Cookies text (FR)</label><textarea
-                            name='siteCopyrightText_fr' id='siteCopyrightText_fr' rows='5'
-                            class='form-control'></textarea></div>
-                    <h4 class='settingsSubHeading'>Copyright name</h4>
-                    <span class="settingDescription">Who has the copyrigfht of your content? Your name, site name, or
-                        organization name.</span>
-                    <div class='form-group'><label for='siteCopyrightName'>Copyright name</label><input
-                            type='text' name='siteCopyrightName' id='siteCopyrightName' class='form-control'></div>
-                    <h4 class='settingsSubHeading'>Contact infomration</h4>
-                    <span class="settingDescription">An email address that can be used to contact you.</span>
-                    <div class='form-group'><label for='siteContactEmail'>Contact email</label><input type='text'
-                            name='siteContactEmail' id='siteContactEmail' class='form-control'></div><br>
+                                <h4 class='settingsSubHeading'>Sponsors</h4>
+                                <span class="settingDescription">Toggle to show or hide sponsor information and links.</span>
+                                <div class='form-group'><label for='siteAllowSponsors'>Allow sponsors</label>
+                                    <select class='form-control' id='siteAllowSponsors' name='siteAllowSponsors'>
+                                        <option value='0'>OFF</option> <!-- Allow sponsors OFF -->
+                                        <option value='1'>ON</option> <!-- Allow sponsors ON -->
+                                    </select>
+                                </div>
+                                <h4 class='settingsSubHeading'>Buy me a coffee</h4>
+                                <span class="settingDescription">Toggle to show or hide "Buy me a coffee" information and links.</span>
+                                <div class='form-group'><label for='siteAllowCoffee'>Allow "Buy me a coffee"</label>
+                                    <select class='form-control' id='siteAllowCoffee' name='siteAllowCoffee'>
+                                        <option value='0'>OFF</option> <!-- Allow coffee link OFF -->
+                                        <option value='1'>ON</option> <!-- Allow coffee link ON -->
+                                    </select>
+                                </div>
+                                <h4 class='settingsSubHeading'>Buy me a coffee - handler</h4>
+                                <span class="settingDescription">Enter your "Buy me a coffee" handle (the finel part of your "buy me a
+                                    coffee" link). Get one at <a href="https://buymeacoffee.com" title="Buy me a coffee"
+                                        target="_blank">buymeacoffee.com</a>.</span>
+                                <div class='form-group'><label for='siteCoffeeLink'>Buymeacoffee handle</label><input
+                                        type='text' name='siteCoffeeLink' id='siteCoffeeLink' class='form-control'></div><br>
+
+                                <h4 class='settingsSubHeading'>Cookies text</h4>
+                                <span class="settingDescription">The text that appears in when you click the "Cookies" link in the page
+                                    footer.</span>
+                                <div class='form-group'><label for='siteCopyrightText_en'>Cookies text (EN)</label><textarea
+                                        name='siteCopyrightText_en' id='siteCopyrightText_en' rows='5'
+                                        class='form-control'></textarea></div>
+                                <div class='form-group'><label for='siteCopyrightText_no'>Cookies text (NO)</label><textarea
+                                        name='siteCopyrightText_no' id='siteCopyrightText_no' rows='5'
+                                        class='form-control'></textarea></div>
+                                <div class='form-group'><label for='siteCopyrightText_de'>Cookies text (DE)</label><textarea
+                                        name='siteCopyrightText_de' id='siteCopyrightText_de' rows='5'
+                                        class='form-control'></textarea></div>
+                                <div class='form-group'><label for='siteCopyrightText_es'>Cookies text (ES)</label><textarea
+                                        name='siteCopyrightText_es' id='siteCopyrightText_es' rows='5'
+                                        class='form-control'></textarea></div>
+                                <div class='form-group'><label for='siteCopyrightText_fr'>Cookies text (FR)</label><textarea
+                                        name='siteCopyrightText_fr' id='siteCopyrightText_fr' rows='5'
+                                        class='form-control'></textarea></div>
+                                <h4 class='settingsSubHeading'>Copyright name</h4>
+                                <span class="settingDescription">Who has the copyrigfht of your content? Your name, site name, or
+                                    organization name.</span>
+                                <div class='form-group'><label for='siteCopyrightName'>Copyright name</label><input
+                                        type='text' name='siteCopyrightName' id='siteCopyrightName' class='form-control'></div>
+                                <h4 class='settingsSubHeading'>Contact infomration</h4>
+                                <span class="settingDescription">An email address that can be used to contact you.</span>
+                                <div class='form-group'><label for='siteContactEmail'>Contact email</label><input type='text'
+                                        name='siteContactEmail' id='siteContactEmail' class='form-control'></div><br>
 
                     
-                    <br>
-                    <button type="submit" name="submit_form" class="btn btn-primary">Save changes</button>
-                </form>
+                                <br>
+                                <button type="submit" name="submit_form" class="btn btn-primary">Save changes</button>
+                            </form>
 
             <?php } else { ?>
                 <!-- Edit settings -->
@@ -252,6 +261,14 @@
                     <div class='form-group'><label for='siteWelcomeText_fr'>Welcome text (FR)</label><textarea
                             id="siteWelcomeText_fr" name="siteWelcomeText_fr" rows="5"
                             class='form-control'><?php echo $siteWelcomeText_fr ?></textarea></div><br>
+                    
+                    <h4 class='settingsSubHeading'>Ratufa script</h4>
+                    <span class="settingDescription">Paste the code for your Ratufa contact form. It should look something like like this: <br>
+                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br>
+                    Add ?i=contact_form to your code.</span>
+                    <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
+                            id='siteRatufaScript' name='siteRatufaScript' rows='5'
+                            class='form-control'><?php echo $siteRatufaScript ?></textarea></div><br>
 
                     <h4 class='settingsSubHeading'>Sponsors</h4>
                     <span class="settingDescription">Toggle to show or hide sponsor information and links.</span>
