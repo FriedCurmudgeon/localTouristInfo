@@ -61,6 +61,7 @@ $usrArr = $conn->getUserInfo();
             $siteCopyrightText_fr = $settingsArr[$i]['siteCopyrightText_fr'];
             $siteCopyrightName = $settingsArr[$i]['siteCopyrightName'];
             $siteContactEmail = $settingsArr[$i]['siteContactEmail'];
+            $siteRatufaScript = $settingsArr[$i]['siteRatufaScript'];
 
             if ($siteAllowCoffee !== 1 ) {
               $hideCoffeeLink = 'display:none';
