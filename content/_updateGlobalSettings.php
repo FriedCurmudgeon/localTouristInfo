@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $siteWelcomeText_de = test_input($_POST['siteWelcomeText_de']);
     $siteWelcomeText_es = test_input($_POST['siteWelcomeText_es']);
     $siteWelcomeText_fr = test_input($_POST['siteWelcomeText_fr']);
+    $siteRatufaScript = $_POST['siteRatufaScript'];
     $siteAllowSponsors = test_input($_POST['siteAllowSponsors']);
     $siteAllowCoffee = test_input($_POST['siteAllowCoffee']);
     $siteCoffeeLink = test_input($_POST['siteCoffeeLink']);
@@ -41,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $siteContactEmail = test_input($_POST['siteContactEmail']);
 
 
-    $conn->updateGlobalSettings($id, $siteTitle, $siteTitle_no, $siteTitle_de, $siteTitle_es, $siteTitle_fr, $siteShortTitle, $siteShortTitle_no, $siteShortTitle_de, $siteShortTitle_es, $siteShortTitle_fr, $siteDescription, $siteDescription_no, $siteDescription_de, $siteDescription_es, $siteDescription_fr, $siteWelcomeTextToggle, $siteWelcomeTextTitle, $siteWelcomeTextTitle_no, $siteWelcomeTextTitle_de, $siteWelcomeTextTitle_es, $siteWelcomeTextTitle_fr, $siteWelcomeText, $siteWelcomeText_no, $siteWelcomeText_de, $siteWelcomeText_es, $siteWelcomeText_fr, $siteAllowSponsors, $siteAllowCoffee, $siteCoffeeLink, $siteCopyrightText, $siteCopyrightText_no, $siteCopyrightText_de, $siteCopyrightText_es, $siteCopyrightText_fr, $siteCopyrightName, $siteContactEmail);
+    $conn->updateGlobalSettings($id, $siteTitle, $siteTitle_no, $siteTitle_de, $siteTitle_es, $siteTitle_fr, $siteShortTitle, $siteShortTitle_no, $siteShortTitle_de, $siteShortTitle_es, $siteShortTitle_fr, $siteDescription, $siteDescription_no, $siteDescription_de, $siteDescription_es, $siteDescription_fr, $siteWelcomeTextToggle, $siteWelcomeTextTitle, $siteWelcomeTextTitle_no, $siteWelcomeTextTitle_de, $siteWelcomeTextTitle_es, $siteWelcomeTextTitle_fr, $siteWelcomeText, $siteWelcomeText_no, $siteWelcomeText_de, $siteWelcomeText_es, $siteWelcomeText_fr, $siteRatufaScript, $siteAllowSponsors, $siteAllowCoffee, $siteCoffeeLink, $siteCopyrightText, $siteCopyrightText_no, $siteCopyrightText_de, $siteCopyrightText_es, $siteCopyrightText_fr, $siteCopyrightName, $siteContactEmail);
     ?>
 
 <div class='card'>
