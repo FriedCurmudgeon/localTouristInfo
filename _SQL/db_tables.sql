@@ -92,6 +92,7 @@ CREATE TABLE `siteSettings` (
   `siteWelcomeText_de` text NOT NULL,
   `siteWelcomeText_es` text NOT NULL,
   `siteWelcomeText_fr` text NOT NULL,
+  `siteRatufaScript` text NOT NULL,
   `siteAllowSponsors` smallint(10) NOT NULL DEFAULT 0,
   `siteAllowCoffee` smallint(10) NOT NULL DEFAULT 0,
   `siteCoffeeLink` varchar(300) NOT NULL,
