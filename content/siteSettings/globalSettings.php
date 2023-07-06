@@ -97,9 +97,9 @@
                             class='form-control'>Enter a welcome text.</textarea></div><br>
 
                     <h4 class='settingsSubHeading'>Ratufa script</h4>
-                    <span class="settingDescription">Paste the code for your Ratufa contact form. It should look something like like this: <br>
-                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br>
-                    Add ?i=contact_form to your code.</span>
+                    <span class="settingDescription"><br>Paste the code for your Ratufa contact form. It should look something like like this: <br>
+                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br><br>
+                    Add <strong>?i=contact_form</strong> to your code.<br><br></span>
                     <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
                             id='siteRatufaScript' name='siteRatufaScript' rows='5'
                             class='form-control'></textarea></div>
@@ -263,9 +263,9 @@
                             class='form-control'><?php echo $siteWelcomeText_fr ?></textarea></div><br>
                     
                     <h4 class='settingsSubHeading'>Ratufa script</h4>
-                    <span class="settingDescription">Paste the code for your Ratufa contact form. It should look something like like this: <br>
-                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br>
-                    Add ?i=contact_form to your code.</span>
+                    <span class="settingDescription"><br>Paste the code for your Ratufa contact form. It should look something like like this: <br>
+                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br><br>
+                    Add <strong>?i=contact_form</strong> to your code.<br><br></span>
                     <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
                             id='siteRatufaScript' name='siteRatufaScript' rows='5'
                             class='form-control'><?php echo $siteRatufaScript ?></textarea></div><br>
