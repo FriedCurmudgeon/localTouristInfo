@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $siteDescription_es = test_input($_POST['siteDescription_es']);
     $siteDescription_fr = test_input($_POST['siteDescription_fr']);
     $siteWelcomeTextToggle = test_input($_POST['siteWelcomeTextToggle']);
+    $siteWelcomeTextLat = test_input($_POST['siteWelcomeTextLat']);
+    $siteWelcomeTextLon = test_input($_POST['siteWelcomeTextLon']);
     $siteWelcomeTextTitle = test_input($_POST['siteWelcomeTextTitle_en']);
     $siteWelcomeTextTitle_no = test_input($_POST['siteWelcomeTextTitle_no']);
     $siteWelcomeTextTitle_de = test_input($_POST['siteWelcomeTextTitle_de']);
@@ -39,11 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $siteCopyrightText_fr = test_input($_POST['siteCopyrightText_fr']);
     $siteCopyrightName = test_input($_POST['siteCopyrightName']);
     $siteContactEmail = test_input($_POST['siteContactEmail']);
+    $siteDefaultLat = test_input($_POST['siteDefaultLat']);
+    $siteDefaultLon = test_input($_POST['siteDefaultLon']);
+    $siteDefaultZoom = test_input($_POST['siteDefaultZoom']);
+    $siteToggleTinyMCE = test_input($_POST['siteToggleTinyMCE']);
+    $siteSettingsTinyMCE = $_POST['siteSettingsTinyMCE'];
     
 
 
 
-    $conn->storeGlobalSettings($siteTitle, $siteTitle_no, $siteTitle_de, $siteTitle_es, $siteTitle_fr, $siteShortTitle, $siteShortTitle_no, $siteShortTitle_de, $siteShortTitle_es, $siteShortTitle_fr, $siteDescription, $siteDescription_no, $siteDescription_de, $siteDescription_es, $siteDescription_fr, $siteWelcomeTextToggle, $siteWelcomeTextTitle, $siteWelcomeTextTitle_no, $siteWelcomeTextTitle_de, $siteWelcomeTextTitle_es, $siteWelcomeTextTitle_fr, $siteWelcomeText, $siteWelcomeText_no, $siteWelcomeText_de, $siteWelcomeText_es, $siteWelcomeText_fr, $siteRatufaScript, $siteAllowSponsors, $siteAllowCoffee, $siteCoffeeLink, $siteCopyrightText, $siteCopyrightText_no, $siteCopyrightText_de, $siteCopyrightText_es, $siteCopyrightText_fr, $siteCopyrightName, $siteContactEmail);
+    $conn->storeGlobalSettings($siteTitle, $siteTitle_no, $siteTitle_de, $siteTitle_es, $siteTitle_fr, $siteShortTitle, $siteShortTitle_no, $siteShortTitle_de, $siteShortTitle_es, $siteShortTitle_fr, $siteDescription, $siteDescription_no, $siteDescription_de, $siteDescription_es, $siteDescription_fr, $siteWelcomeTextToggle, $siteWelcomeTextLat, $siteWelcomeTextLon, $siteWelcomeTextTitle, $siteWelcomeTextTitle_no, $siteWelcomeTextTitle_de, $siteWelcomeTextTitle_es, $siteWelcomeTextTitle_fr, $siteWelcomeText, $siteWelcomeText_no, $siteWelcomeText_de, $siteWelcomeText_es, $siteWelcomeText_fr, $siteRatufaScript, $siteAllowSponsors, $siteAllowCoffee, $siteCoffeeLink, $siteCopyrightText, $siteCopyrightText_no, $siteCopyrightText_de, $siteCopyrightText_es, $siteCopyrightText_fr, $siteCopyrightName, $siteContactEmail, $siteDefaultLat, $siteDefaultLon, $siteDefaultZoom, $siteToggleTinyMCE, $siteSettingsTinyMCE);
     ?>
     
 <div class='card'>
