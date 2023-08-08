@@ -14,6 +14,17 @@
             <?php if ($settingsId === '0') { ?>
                 <!-- First time setup -->
                 <form method='POST' action='?p=_storeGlobalSettings' enctype="multipart/form-data">
+                    <h4 class='settinsSubHeading'>TinyMCE<h4>
+                    <span class='settingDescription'>If you want to use TinyMCE you need to enable it here, and provide your personalized script from TinyMCE. Register at TinyMCE to get the script.</span>
+                    <div class='form-group'><label for='siteToggleTinyMCE'>Toggle TinyMCE</label>
+                        <select class='form-control' id='siteToggleTinyMCE' name='siteToggleTinyMCE'>
+                            <option value='0'>OFF</option> <!-- Allow sponsors OFF -->
+                            <option value='1'>ON</option> <!-- Allow sponsors ON -->
+                        </select>
+                    </div>
+                    <div class='form-group'><label for='siteSettingsTinyMCE'>TinyMCE script</label><input type='text'
+                            name='siteSettingsTinyMCE' id='siteSettingsTinyMCE' class='form-control'></div><br>
+
                     <h4 class='settingsSubHeading'>Site title</h4>
                     <span class="settingDescription">This is the title that is shown to the search-engines, and in the browsers
                         title bar.</span>
@@ -63,7 +74,15 @@
                             <option value='0'>OFF</option> <!-- Allow sponsors OFF -->
                             <option value='1'>ON</option> <!-- Allow sponsors ON -->
                         </select>
-                    </div>
+                    </div><br>
+
+                    <h4 class='settingsSubHeading'>Welcome textbox position on map</h4>
+                    <span class="settingDescription">Define the default map coordinates for where the welcome textbox should be displayed. Format for Lat/Lon: 00.00000000000000.</span>
+                    <div class='form-group'><label for='siteWelcomeTextLat'>Default Latitude</label><input
+                            type='text' name='siteWelcomeTextLat' id='siteWelcomeTextLat' class='form-control'></div>
+                    <div class='form-group'><label for='siteWelcomeTextLon'>Default Longtitude</label><input
+                            type='text' name='siteWelcomeTextLon' id='siteWelcomeTextLon' class='form-control'></div><br>
+
                     <h4 class='settingsSubHeading'>Welcome textbox - Title</h4>
                     <span class="settingDescription">This is the title of the textbox that appears when the page is
                         loaded.</span>
@@ -95,6 +114,15 @@
                     <div class='form-group'><label for='siteWelcomeText_fr'>Welcome text (FR)</label><textarea
                             id="siteWelcomeText_fr" name="siteWelcomeText_fr" rows="5"
                             class='form-control'>Enter a welcome text.</textarea></div><br>
+                    
+                    <h4 class='settingsSubHeading'>Default map coordinates</h4>
+                    <span class="settingDescription">Define the default map coordinates. This is the location the map will open on page loading. Format for Lat/Lon: 00.00000000000000. Zoom level i.e.: 12.</span>
+                    <div class='form-group'><label for='siteDefaultLat'>Default Latitude</label><input
+                            type='text' name='siteDefaultLat' id='siteDefaultLat' class='form-control'></div>
+                    <div class='form-group'><label for='siteDefaultLon'>Default Longtitude</label><input
+                            type='text' name='siteDefaultLon' id='siteDefaultLon' class='form-control'></div>
+                    <div class='form-group'><label for='siteDefaultZoom'>Default Zoom Level</label><input
+                            type='text' name='siteDefaultZoom' id='siteDefaultZoom' class='form-control'></div>
 
                     <h4 class='settingsSubHeading'>Ratufa script</h4>
                     <span class="settingDescription"><br>Create an account and prepare a form at <a href='https://ratufa.io' target='_blank' title='Go to ratufa.io'>ratufa.io</a>.<br>Paste the code for your Ratufa contact form. It should look something like like this: <br>
@@ -151,7 +179,7 @@
                                     organization name.</span>
                                 <div class='form-group'><label for='siteCopyrightName'>Copyright name</label><input
                                         type='text' name='siteCopyrightName' id='siteCopyrightName' class='form-control'></div>
-                                <h4 class='settingsSubHeading'>Contact infomration</h4>
+                                <h4 class='settingsSubHeading'>Contact information</h4>
                                 <span class="settingDescription">An email address that can be used to contact you.</span>
                                 <div class='form-group'><label for='siteContactEmail'>Contact email</label><input type='text'
                                         name='siteContactEmail' id='siteContactEmail' class='form-control'></div><br>
@@ -164,13 +192,24 @@
             <?php } else { ?>
                 <!-- Edit settings -->
                 <form method='POST' action='?p=_updateGlobalSettings' enctype="multipart/form-data">
-                    <input type='hidden' name='id' id='id' class='inputClass readonly' value='<?php echo $settingsId ?>'
-                        readonly>
-                    <h4 class='settingsSubHeading'>Site title</h4>
-                    <span class="settingDescription">This is the title that is shown to the search-engines, and in the browsers
-                        title bar.</span>
-                    <div class='form-group'><label for='siteTitle_en'>Site title (EN)</label><input type='text'
-                            name='siteTitle_en' id='siteTitle_en' class='form-control' value='<?php echo $siteTitle ?>'></div>
+                    <input type='hidden' name='id' id='id' class='inputClass readonly' value='<?php echo $settingsId ?>' readonly>
+                    <h4 class='settingsSubHeading'>TinyMCE</h4>
+                    <span class='settingDescription'>If you want to use TinyMCE you need to enable it here, and provide your personalized script from TinyMCE. Register at TinyMCE to get the script.</span>
+                    <div class='form-group'><label for='siteToggleTinyMCE'>Toggle TinyMCE</label>
+                        <select class='form-control' id='siteToggleTinyMCE' name='siteToggleTinyMCE'>
+                            <option value='0' <?php if ($siteToggleTinyMCE == '0') echo " selected='selected'"; ?>>OFF</option> <!-- Use TinyMCE OFF -->
+                            <option value='1' <?php if ($siteToggleTinyMCE == '1') echo " selected='selected'"; ?>>ON</option> <!-- Use TinyMCE ON -->
+                        </select>
+                    </div>
+                    <div class='form-group'><label for='siteSettingsTinyMCE'>TinyMCE script</label><input type='text'
+                            name='siteSettingsTinyMCE' id='siteSettingsTinyMCE' class='form-control' value='<?php echo $siteSettingsTinyMCE ?>'>
+                    </div><br>
+
+                            <h4 class='settingsSubHeading'>Site title</h4>
+                            <span class="settingDescription">This is the title that is shown to the search-engines, and in the browsers
+                                title bar.</span>
+                            <div class='form-group'><label for='siteTitle_en'>Site title (EN)</label><input type='text'
+                                    name='siteTitle_en' id='siteTitle_en' class='form-control' value='<?php echo $siteTitle ?>'></div>
                     <div class='form-group'><label for='siteTitle_no'>Site title (NO)</label><input type='text'
                             name='siteTitle_no' id='siteTitle_no' class='form-control' value='<?php echo $siteTitle_no ?>'></div>
                     <div class='form-group'><label for='siteTitle_de'>Site title (DE)</label><input type='text'
@@ -213,6 +252,7 @@
                     <div class='form-group'><label for='siteDescription_fr'>Site description (FR)</label><textarea
                             name='siteDescription_fr' id='siteDescription_fr' rows='5'
                             class='form-control'><?php echo $siteDescription_fr ?></textarea></div>
+
                     <h4 class='settingsSubHeading'>Toggle welcome text</h4>
                     <span class="settingDescription">Toggle to show or hide welcome text.</span>
                     <div class='form-group'><label for='siteWelcomeTextToggle'>Toggle welcome text</label>
@@ -224,11 +264,18 @@
                                 echo " selected='selected'"; ?>>ON</option>
                             <!-- Welcome text On -->
                         </select>
-                    </div>
+                    </div><br>
+
+                    <h4 class='settingsSubHeading'>Welcome textbox position on map</h4>
+                    <span class="settingDescription">Define the default map coordinates for where the welcome textbox should be displayed. Format for Lat/Lon: 00.00000000000000.</span>
+                    <div class='form-group'><label for='siteWelcomeTextLat'>Welcome Textbox Latitude</label><input
+                            type='text' name='siteWelcomeTextLat' id='siteWelcomeTextLat' class='form-control' value='<?php echo $siteWelcomeTextLat ?>'></div>
+                    <div class='form-group'><label for='siteWelcomeTextLon'>Welcome Textbox Longtitude</label><input
+                            type='text' name='siteWelcomeTextLon' id='siteWelcomeTextLon' class='form-control' value='<?php echo $siteWelcomeTextLon ?>'></div><br>
+
                     <h4 class='settingsSubHeading'>Welcome textbox - Title</h4>
-                    <span class="settingDescription">This is the title of the textbox that appears when the page is
-                        loaded.</span>
-                    <div class='form-group'><label for='siteWelcomeTextTitle_en'>Welcome Title (EN)</label><input
+                    <span class="settingDescription">This is the title of the textbox that appears when the page is loaded.</span>
+                        <div class='form-group'><label for='siteWelcomeTextTitle_en'>Welcome Title (EN)</label><input
                             type='text' name='siteWelcomeTextTitle_en' id='siteWelcomeTextTitle_en' class='form-control'
                             value='<?php echo $siteWelcomeTextTitle ?>'></div>
                     <div class='form-group'><label for='siteWelcomeTextTitle_no'>Welcome Title (NO)</label><input
@@ -261,14 +308,23 @@
                     <div class='form-group'><label for='siteWelcomeText_fr'>Welcome text (FR)</label><textarea
                             id="siteWelcomeText_fr" name="siteWelcomeText_fr" rows="5"
                             class='form-control'><?php echo $siteWelcomeText_fr ?></textarea></div><br>
+
+                    <h4 class='settingsSubHeading'>Default map coordinates</h4>
+                    <span class="settingDescription">Define the default map coordinates. This is the location the map will open on page loading. Format for Lat/Lon: 00.00000000000000. Zoom level i.e.: 12.</span>
+                    <div class='form-group'><label for='siteDefaultLat'>Default Latitude</label><input
+                            type='text' name='siteDefaultLat' id='siteDefaultLat' class='form-control' value='<?php echo $siteDefaultLat ?>'></div>
+                            <div class='form-group'><label for='siteDefaultLon'>Default Longtitude</label><input
+                                    type='text' name='siteDefaultLon' id='siteDefaultLon' class='form-control' value='<?php echo $siteDefaultLon ?>'></div>
+                                    <div class='form-group'><label for='siteDefaultZoom'>Default Zoom Level</label><input
+                                            type='text' name='siteDefaultZoom' id='siteDefaultZoom' class='form-control' value='<?php echo $siteDefaultZoom ?>'></div>
                     
-                    <h4 class='settingsSubHeading'>Ratufa script</h4>
-                    <span class="settingDescription"><br>Create an account and prepare a form at <a href='https://ratufa.io' target='_blank' title='Go to ratufa.io'>ratufa.io</a>.<br>Paste the code for your Ratufa contact form. It should look something like like this: <br>
-                    <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br><br>
-                    Add <strong>?i=contact_form</strong> to your code.<br><br></span>
-                    <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
-                            id='siteRatufaScript' name='siteRatufaScript' rows='5'
-                            class='form-control'><?php echo $siteRatufaScript ?></textarea></div><br>
+                                            <h4 class='settingsSubHeading'>Ratufa script</h4>
+                                            <span class="settingDescription"><br>Create an account and prepare a form at <a href='https://ratufa.io' target='_blank' title='Go to ratufa.io'>ratufa.io</a>.<br>Paste the code for your Ratufa contact form. It should look something like like this: <br>
+                                            <code>&lt;script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=contact_form&f=ab123jf4&n=n1.ratufa.io"&gt;&lt;/script&gt;</code><br><br>
+                                            Add <strong>?i=contact_form</strong> to your code.<br><br></span>
+                                            <div class='form-group'><label for='siteRatufaScript'>Ratufa.io Script</label><textarea
+                                                    id='siteRatufaScript' name='siteRatufaScript' rows='5'
+                                                    class='form-control'><?php echo $siteRatufaScript ?></textarea></div><br>
 
                     <h4 class='settingsSubHeading'>Sponsors</h4>
                     <span class="settingDescription">Toggle to show or hide sponsor information and links.</span>
@@ -326,9 +382,9 @@
                     <div class='form-group'><label for='siteCopyrightName' class='labelClass'>Copyright name</label><input
                             type='text' name='siteCopyrightName' id='siteCopyrightName' class='form-control'
                             value='<?php echo $siteCopyrightName ?>'></div>
-                    <h4 class='settingsSubHeading'>Contact infomration</h4>
+                    <h4 class='settingsSubHeading'>Contact information</h4>
                     <span class="settingDescription">An email address that can be used to contact you.</span>
-                    <div class='form-group'><label for='siteContactEmail' class='form-control'>Contact email</label><input type='text'
+                    <div class='form-group'><label for='siteContactEmail'>Contact email</label><input type='text'
                             name='siteContactEmail' id='siteContactEmail' class='form-control'
                             value='<?php echo $siteContactEmail ?>'></div><br>
 
