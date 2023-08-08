@@ -24,6 +24,6 @@ _Note: the first location you add (with ID 1 in the database) will be hidden to 
 - (more?)
 
 ## ToDo
-- Add toggle TinyMCE.
-- Add ability to define start coordinates in settings. This is now hard-coded.
+- ~~Add toggle TinyMCE.~~ (implemented)
+- ~~Add ability to define start coordinates in settings. This is now hard-coded.~~  (implemented)
 - Maybe something else.
