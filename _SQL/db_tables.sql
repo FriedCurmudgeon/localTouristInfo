@@ -82,6 +82,8 @@ CREATE TABLE `siteSettings` (
   `siteMaintenanceText_es` text NOT NULL,
   `siteMaintenanceText_fr` text NOT NULL,
   `siteWelcomeTextToggle` smallint(10) NOT NULL DEFAULT 0,
+  `siteWelcomeTextLat` varchar(20) NOT NULL,
+  `siteWelcomeTextLon` varchar(20) NOT NULL,
   `siteWelcomeTextTitle` varchar(100) NOT NULL,
   `siteWelcomeTextTitle_no` varchar(100) NOT NULL,
   `siteWelcomeTextTitle_de` varchar(100) NOT NULL,
@@ -102,7 +104,12 @@ CREATE TABLE `siteSettings` (
   `siteCopyrightText_es` text NOT NULL,
   `siteCopyrightText_fr` text NOT NULL,
   `siteCopyrightName` varchar(100) NOT NULL,
-  `siteContactEmail` varchar(100) NOT NULL
+  `siteContactEmail` varchar(100) NOT NULL,
+  `siteDefaultLat` varchar(20) NOT NULL,
+  `siteDefaultLon` varchar(20) NOT NULL,
+  `siteDefaultZoom` tinyint(2) NOT NULL,
+  `siteToggleTinyMCE` tinyint(1) NOT NULL DEFAULT 0,
+  `siteSettingsTinyMCE` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
