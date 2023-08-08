@@ -49,7 +49,6 @@ require_once('./config/variables.php'); // Load user-defined variables
 require_once('./config/functions.php'); // Load functions
 // require_once('./config/lang/no_NO.php'); // Define localization
 isSessionUsernameSet(); // If session variable is not set it will redirect to login page
-
 ?>
 
 <!DOCTYPE HTML>
@@ -73,6 +72,8 @@ isSessionUsernameSet(); // If session variable is not set it will redirect to lo
     <!-- Load Web analytics form Piwik Pro -->
     <?php loadWebAnalytics() ?>
 
+          <!-- Load TinyMCE -->
+    <?php if ($siteToggleTinyMCE === 1) { echo $siteSettingsTinyMCE; } ?>
 </head>
 
 <body>
@@ -93,7 +94,6 @@ isSessionUsernameSet(); // If session variable is not set it will redirect to lo
         <div class='mainAdm' id='main_content'>
 
             <!-- Mainteneance notification -->
-            <!-- Uncomment the following line before maintenance -->
             <?php
             if ($siteMaintenance === 1) {
                 echo ('<div class="alert alert-danger attention" id="attention"><i class="fa fa-exclamation-triangle"></i> <strong>' . $Parsedown->line($maintText) . '</strong></div>');
@@ -141,8 +141,7 @@ isSessionUsernameSet(); // If session variable is not set it will redirect to lo
         </div>
 
         <?php echo $siteFooter ?>
-        <?php $arr = $conn->getLocations(); //missions get loaded in missionsContent.php ?>
-
+        <?php $arr = $conn->getLocations(); ?>
 </body>
 
 </html>
