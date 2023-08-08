@@ -18,9 +18,10 @@ _Note: the first location you add (with ID 1 in the database) will be hidden to 
 - [Leaflet.ExtraMarkers](https://github.com/coryasilva/Leaflet.ExtraMarkers)
 - [Bootstrap](https://getbootstrap.com/)
 - [FontAwesome](https://fontawesome.com/)
-- [TinyMCE](https://www.tiny.cloud/)
+- [TinyMCE](https://www.tiny.cloud/) (optional)
 - [Parsedown.js](https://github.com/erusev/parsedown)
-- [BuyMeACoffee](https://buymeacoffee.com/tngld)
+- [BuyMeACoffee](https://buymeacoffee.com/tngld) (optional)
+- [Ratufa.io](https://ratufa.io) (optional)
 - (more?)
 
 ## ToDo
