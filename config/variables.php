@@ -41,6 +41,8 @@ $usrArr = $conn->getUserInfo();
             $siteMaintenanceText_es = $settingsArr[$i]['siteMaintenanceText_es'];
             $siteMaintenanceText_fr = $settingsArr[$i]['siteMaintenanceText_fr'];
             $siteWelcomeTextToggle = $settingsArr[$i]['siteWelcomeTextToggle'];
+            $siteWelcomeTextLat = $settingsArr[$i]['siteWelcomeTextLat'];
+            $siteWelcomeTextLon = $settingsArr[$i]['siteWelcomeTextLon'];
             $siteWelcomeTextTitle = $settingsArr[$i]['siteWelcomeTextTitle'];
             $siteWelcomeTextTitle_no = $settingsArr[$i]['siteWelcomeTextTitle_no'];
             $siteWelcomeTextTitle_de = $settingsArr[$i]['siteWelcomeTextTitle_de'];
@@ -62,6 +64,11 @@ $usrArr = $conn->getUserInfo();
             $siteCopyrightName = $settingsArr[$i]['siteCopyrightName'];
             $siteContactEmail = $settingsArr[$i]['siteContactEmail'];
             $siteRatufaScript = $settingsArr[$i]['siteRatufaScript'];
+            $siteDefaultLat = $settingsArr[$i]['siteDefaultLat'];
+            $siteDefaultLon = $settingsArr[$i]['siteDefaultLon'];
+            $siteDefaultZoom = $settingsArr[$i]['siteDefaultZoom'];
+            $siteToggleTinyMCE = $settingsArr[$i]['siteToggleTinyMCE'];
+            $siteSettingsTinyMCE = $settingsArr[$i]['siteSettingsTinyMCE'];
 
             if ($siteAllowCoffee !== 1 ) {
               $hideCoffeeLink = 'display:none';
